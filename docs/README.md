@@ -1,4 +1,18 @@
-# Projeto Shio 
+# Projeto Shio
+
+**Grupo 1 — Shio E-commerce** &nbsp;|&nbsp; **Monitor:** João Victor Costa Andrade
+
+| Matrícula | Nome |
+|-----------|------|
+| 211031566 | Ana Joyce |
+| 221007958 | Cláudio Henrique |
+| 222037610 | Gabriel Lima |
+| 221008098 | Henrique Quenino |
+| 211031083 | Júlia Vitória |
+| 221008294 | Luiza Maluf |
+| 190116072 | Raphaela |
+
+---
 
 ## 1. Objetivo do Projeto
 

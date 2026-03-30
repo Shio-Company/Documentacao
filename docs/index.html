@@ -6,39 +6,257 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Documentação técnica da Plataforma Shio: E-commerce + Comunidade">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <style>
+    /* ── Variáveis ─────────────────────────────────────────── */
+    :root {
+      --color-bg:       #f5f5f5;
+      --color-surface:  #ffffff;
+      --color-sidebar:  #2d2d2d;
+      --color-border:   #e0e0e0;
+      --color-text:     #1a1a1a;
+      --color-muted:    #666666;
+      --color-accent:   #000000;
+      --color-code-bg:  #efefef;
+      --font-body:      'Inter', sans-serif;
+      --font-mono:      'JetBrains Mono', monospace;
+    }
+
+    /* ── Base ──────────────────────────────────────────────── */
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+    }
+
+    /* ── Sidebar ───────────────────────────────────────────── */
+    .sidebar {
+      background: var(--color-sidebar);
+      border-right: none;
+    }
+
+    .sidebar .app-name-link {
+      display: block;
+      text-align: center;
+      padding: 20px 0 12px;
+    }
+
+    .sidebar .app-name-link img {
+      width: 130px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .sidebar ul li a {
+      color: #aaaaaa !important;
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+
+    .sidebar ul li a:hover,
+    .sidebar ul li.active > a {
+      color: #ffffff !important;
+    }
+
+    .sidebar ul li.active > a {
+      font-weight: 600;
+      border-right: 2px solid #ffffff;
+    }
+
+    /* ── Conteúdo principal ────────────────────────────────── */
+    .content {
+      background: var(--color-bg);
+    }
+
+    .markdown-section {
+      max-width: 860px;
+      color: var(--color-text);
+      background: var(--color-surface);
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    /* ── Títulos ───────────────────────────────────────────── */
+    .markdown-section h1 {
+      color: var(--color-accent);
+      font-weight: 700;
+      font-size: 2rem;
+      border-bottom: 2px solid var(--color-accent);
+      padding-bottom: 0.4em;
+    }
+
+    .markdown-section h2 {
+      color: var(--color-accent);
+      font-weight: 600;
+      font-size: 1.4rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.3em;
+    }
+
+    .markdown-section h3 {
+      color: var(--color-text);
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    /* ── Links ─────────────────────────────────────────────── */
+    .markdown-section a {
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.2s;
+    }
+
+    .markdown-section a:hover {
+      opacity: 0.6;
+    }
+
+    /* ── Tabelas ───────────────────────────────────────────── */
+    .markdown-section table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .markdown-section thead tr {
+      background: var(--color-accent);
+    }
+
+    .markdown-section thead th {
+      color: #ffffff;
+      border: 1px solid var(--color-accent);
+      padding: 10px 14px;
+      font-weight: 600;
+    }
+
+    .markdown-section tbody tr:nth-child(odd) {
+      background: #ffffff;
+    }
+
+    .markdown-section tbody tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    .markdown-section tbody td {
+      border: 1px solid var(--color-border);
+      padding: 9px 14px;
+      color: var(--color-text);
+    }
+
+    /* ── Código inline ─────────────────────────────────────── */
+    .markdown-section code {
+      background: var(--color-code-bg);
+      color: var(--color-accent);
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    /* ── Bloco de código ───────────────────────────────────── */
+    .markdown-section pre {
+      background: var(--color-code-bg) !important;
+      border-left: 3px solid var(--color-accent);
+      border-radius: 4px;
+    }
+
+    .markdown-section pre code {
+      background: transparent;
+      color: var(--color-text);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      padding: 0;
+    }
+
+    /* ── Blockquote ────────────────────────────────────────── */
+    .markdown-section blockquote {
+      background: #f9f9f9;
+      border-left: 4px solid var(--color-accent);
+      color: var(--color-muted);
+      margin: 1.2em 0;
+      padding: 12px 20px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .markdown-section blockquote p {
+      margin: 0;
+    }
+
+    /* ── Divisor ───────────────────────────────────────────── */
+    .markdown-section hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 2em 0;
+    }
+
+    /* ── Barra de busca ────────────────────────────────────── */
+    .search input {
+      background: #3a3a3a !important;
+      color: #ffffff !important;
+      border: 1px solid #4a4a4a !important;
+      border-radius: 4px !important;
+    }
+
+    .search input::placeholder {
+      color: #aaaaaa !important;
+    }
+
+    .search .results-panel {
+      background: #3a3a3a !important;
+      border: 1px solid #4a4a4a !important;
+    }
+
+    .search .result-item a {
+      color: #ffffff !important;
+    }
+
+    /* ── Scrollbar ─────────────────────────────────────────── */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--color-bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #cccccc;
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-accent);
+    }
+  </style>
 </head>
 <body>
   <div id="app">Carregando documentação da Shio...</div>
   <script>
     window.$docsify = {
-      // Nome que aparece na barra lateral 
-      name: 'Plataforma Shio',
-      repo: '', // Adicione o link do seu GitHub aqui
-      
-      // Configurações de Navegação
+      name: '<img src="assets/logo.png" alt="Shio" />',
+      repo: '',
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
-
-      // Personalização de busca [cite: 81]
       search: {
-        maxAge: 86400000,
+        maxAge: 0,
         paths: 'auto',
-        placeholder: 'Pesquisar requisitos...',
+        placeholder: 'Pesquisar...',
         noData: 'Nenhum resultado encontrado!',
         depth: 6
       },
-
-      // Texto do rodapé ou nome do projeto
       nameLink: '/',
       formatUpdated: '{DD}/{MM} {HH}:{mm}',
     }
   </script>
-  
+
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
