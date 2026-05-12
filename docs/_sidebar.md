@@ -3,3 +3,4 @@
 * [Especificação de Requisitos](especificacao-requisitos.md)
 * [Backlog do Produto](backlog.md)
 * [ShioOficial — Guia de Estilo](shio-oficial.md)
+* [Reunião de validação de protótipo](reuniao-validacao-prototipo.md)
