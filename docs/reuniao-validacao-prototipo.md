@@ -3,6 +3,7 @@
 **Data:** 11/05/2026  
 **Participantes:** Equipe de desenvolvimento + cliente  
 **Objetivo:** Validação do protótipo de alta fidelidade e alinhamento técnico/comercial do MVP da plataforma.
+**Link:** (https://drive.google.com/file/d/1xrmmFLlzcEyGvifZvgkfVOnvKuRn9-zI/view?usp=drive_link)[https://drive.google.com/file/d/1xrmmFLlzcEyGvifZvgkfVOnvKuRn9-zI/view?usp=drive_link]
 
 ---
 
