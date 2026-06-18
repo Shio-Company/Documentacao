@@ -6,3 +6,4 @@
 * [Protótipo](prototipo.md)
 * [Reunião de validação de protótipo](reuniao-validacao-prototipo.md)
 * [Modelagem de dados](modelagem-dados.md)
+* [Reunião de validação final do MVP](reuniao-validacao-final-mvp.md)
