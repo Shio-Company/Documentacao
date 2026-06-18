@@ -24,5 +24,12 @@ O cliente realizou os testes práticos de validação e homologou a versão para
 Assista abaixo à gravação completa da reunião de validação final do MVP:
 
 <div align="center" style="margin: 20px 0;">
-  <iframe width="460" height="435" src="https://www.youtube.com/embed/0O-hdV02nJs?si=YVR_1qgtHlFDiHfO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe src="https://drive.google.com/file/d/16LRkIIyGcJ-2UTOw9jla88uZR5PUtEzr/preview" width="100%" height="400" style="max-width: 720px; border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" allow="autoplay"></iframe>
+  <p style="margin-top: 12px;">
+    <a href="https://drive.google.com/file/d/16LRkIIyGcJ-2UTOw9jla88uZR5PUtEzr/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: none;">
+      🔗 Abrir gravação diretamente no Google Drive
+    </a>
+  </p>
 </div>
+
+Link direto: [Clique aqui](https://drive.google.com/file/d/16LRkIIyGcJ-2UTOw9jla88uZR5PUtEzr/view?usp=sharing)
